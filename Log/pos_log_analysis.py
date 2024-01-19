@@ -8,11 +8,13 @@ df = pd.read_csv(file_path, sep=" ", header=None)
 
 time = df[0]
 rotation_angles = df.iloc[:, 1:4]
-position = df.iloc[:, 4:7] 
+position = df.iloc[:, 4:7]
+# omega = df.iloc[:, 7:10]
 velocity = df.iloc[:, 10:13]
-bias_gyro = df.iloc[:, 13:16]
-bias_acc = df.iloc[:, 16:19]
-gravity = df.iloc[:, 22:25] 
+# acc = df.iloc[:, 13:16]
+bias_gyro = df.iloc[:, 16:19]
+bias_acc = df.iloc[:, 19:22]
+gravity = df.iloc[:, 22:25]
 
 fig = plt.figure(figsize=(10, 8))
 ax = fig.add_subplot(111, projection='3d')
