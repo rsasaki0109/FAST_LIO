@@ -36,7 +36,7 @@ colors = {
 }
 
 # Create multiple subplots
-fig, axs = plt.subplots(6, 2, figsize=(15, 20))
+fig, axs = plt.subplots(5, 2, figsize=(15, 20))
 
 axs[0, 0].plot(fast_lio_data['timestamp'], fast_lio_data['total_time'], color=colors['blue'])
 axs[0, 0].set_title('Total Time')
@@ -87,16 +87,6 @@ axs[4, 1].plot(fast_lio_data['timestamp'], fast_lio_data['scan_point_size'], col
 axs[4, 1].set_title('Scan Point Size')
 axs[4, 1].set_xlabel('Time (s)')
 axs[4, 1].set_ylabel('Scan Point Size')
-
-axs[5, 0].plot(fast_lio_data['timestamp'], fast_lio_data['delete_size'], color=colors['gray'])
-axs[5, 0].set_title('Delete Size')
-axs[5, 0].set_xlabel('Time (s)')
-axs[5, 0].set_ylabel('Delete Size')
-
-axs[5, 1].plot(fast_lio_data['timestamp'], fast_lio_data['scan_point_size'], color=colors['lightgray'])
-axs[5, 1].set_title('Scan Point Size')
-axs[5, 1].set_xlabel('Time (s)')
-axs[5, 1].set_ylabel('Scan Point Size')
 
 plt.tight_layout()
 plt.show()
